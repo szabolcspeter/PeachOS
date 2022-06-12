@@ -25,8 +25,9 @@ make clean
 ### current status:
 | Task                              | Status          |
 | --------------------------------- | ----------------|
-| Enabling A20 line                 | In progress     |
+| Creating C Cross Compiler         | In progress     |
 
 ### completed tasks:
 - [x] Creating boot sector in 16 bits real mode
 - [x] Entering 32 bits protected mode
+- [x] Enabling A20 line
