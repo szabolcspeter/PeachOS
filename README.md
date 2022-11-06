@@ -13,8 +13,8 @@ This repo is based on https://www.udemy.com/course/developing-a-multithreaded-ke
 
 ### steps to build and run:
 ```
-make
-qemu-system-x86_64 -hda ./bin/boot.bin
+./build.sh
+qemu-system-x86_64 -hda ./bin/os.bin
 ```
 
 ### clean:
@@ -25,9 +25,11 @@ make clean
 ### current status:
 | Task                              | Status          |
 | --------------------------------- | ----------------|
-| Creating C Cross Compiler         | In progress     |
+| Alignment issues                  | In Progress     |
 
 ### completed tasks:
 - [x] Creating boot sector in 16 bits real mode
 - [x] Entering 32 bits protected mode
 - [x] Enabling A20 line
+- [x] Creating C Cross Compiler (gcc)
+- [x] Loading kernel into memory (1M), remote debugging with symbols
