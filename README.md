@@ -25,7 +25,7 @@ make clean
 ### current status:
 | Task                              | Status          |
 | --------------------------------- | ----------------|
-| Alignment issues                  | In Progress     |
+| Interrupt Descriptor Table        | In Progress     |
 
 ### completed tasks:
 - [x] Creating boot sector in 16 bits real mode
@@ -33,3 +33,4 @@ make clean
 - [x] Enabling A20 line
 - [x] Creating C Cross Compiler (gcc)
 - [x] Loading kernel into memory (1M), remote debugging with symbols
+- [x] Basic C print functions for writing to the screen
