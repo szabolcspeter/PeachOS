@@ -17,6 +17,18 @@ This repo is based on https://www.udemy.com/course/developing-a-multithreaded-ke
 qemu-system-x86_64 -hda ./bin/os.bin
 ```
 
+#### remote debugging:
+```
+cd bin
+add-symbol-file ../build/kernelfull.o 0x100000
+y
+break _start
+target remote| qemu-system-x86_64 -hda ./os.bin -S -gdb stdio
+c
+layout asm
+stepi
+```
+
 ### clean:
 ```
 make clean
@@ -25,7 +37,7 @@ make clean
 ### current status:
 | Task                              | Status          |
 | --------------------------------- | ----------------|
-| Interrupt Descriptor Table        | In Progress     |
+| Implementing PIC                  | In Progress     |
 
 ### completed tasks:
 - [x] Creating boot sector in 16 bits real mode
@@ -34,3 +46,4 @@ make clean
 - [x] Creating C Cross Compiler (gcc)
 - [x] Loading kernel into memory (1M), remote debugging with symbols
 - [x] Basic C print functions for writing to the screen
+- [x] Interrupt Descriptor Table

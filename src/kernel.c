@@ -1,6 +1,7 @@
 #include "kernel.h"
 #include <stddef.h>
 #include <stdint.h>
+#include "idt/idt.h"
 
 uint16_t* video_mem = 0;
 uint16_t terminal_row = 0;
@@ -75,4 +76,7 @@ void kernel_main()
     // terminal_writechar('A', 15);
     // terminal_writechar('B', 15);
     // video_mem[0] = terminal_make_char('B', 3);  // This is: 0x0341;
+
+    // Initialize interrupt descriptor table
+    idt_init();
 }
