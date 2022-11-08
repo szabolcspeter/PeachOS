@@ -20,6 +20,7 @@ qemu-system-x86_64 -hda ./bin/os.bin
 #### remote debugging:
 ```
 cd bin
+gdb
 add-symbol-file ../build/kernelfull.o 0x100000
 y
 break _start
